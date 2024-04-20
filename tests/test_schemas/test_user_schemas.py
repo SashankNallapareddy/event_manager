@@ -81,7 +81,7 @@ def test_user_base_username_valid(username, user_base_data):
     user = UserBase(**user_base_data)
     assert user.username == username
 
-@pytest.mark.parametrize("username", ["test user", "test?user", "", "us"])
+@pytest.mark.parametrize("username", ["test user", "test?user", "", "us", "JohnDoe1234567890", "test_user."])
 def test_user_base_username_invalid(username, user_base_data):
     user_base_data["username"] = username
     with pytest.raises(ValidationError):

@@ -2,7 +2,8 @@
 
 Issues Fixed
 1. [Internal Server Error Occurs When Creating the user](https://github.com/SashankNallapareddy/event_manager/issues/1)
-To address the internal server error encountered during user creation due to unexpected username format restrictions, I followed these steps:
+  
+    To address the internal server error encountered during user creation due to unexpected username format restrictions, I followed these steps:
     1. **Identified the Issue:**
       Upon investigating the error logs and reproducing the issue, it became evident that the application was failing to create users as expected.
 
@@ -26,4 +27,18 @@ To address the internal server error encountered during user creation due to une
 
     By following these steps, I effectively addressed the internal server error during user creation by updating the database schema, correcting Alembic migrations, and verifying the changes through thorough testing.
 
-  
+2. [Username Validation Excluding Capital Letters](https://github.com/SashankNallapareddy/event_manager/issues/3)
+
+    To rectify the username validation issue and exclude capital letters, several steps were undertaken:
+
+    1. **Identification of Issue**: An investigation revealed that the validation logic permitted capital letters in usernames, leading to inconsistencies.
+
+    2. **Analysis of Requirements**: Considering the desired username format, which should consist only of lowercase letters, numbers, underscoresand hyphens, the validation logic needed adjustment to enforce these constraints.
+
+    3. **Modification of Validation Logic**: The validation logic was revised to exclude capital letters. Regular expressions (regex) were employed to define the acceptable character set for usernames, ensuring adherence to the specified format.
+
+    4. **Implementation in Backend Codebase**: The updated validation logic was integrated into the backend codebase, replacing the existing validation mechanism. This involved making adjustments to relevant functions or middleware responsible for processing user registration requests.
+
+    5. **Testing and Verification**: Rigorous testing procedures were conducted to validate the effectiveness of the modifications. Test cases were devised to cover various scenarios, including valid and invalid usernames, to ensure consistent behavior and error handling.
+
+    By implementing these steps, the username validation logic was effectively revised to exclude capital letters, thereby mitigating errors and enhancing consistency in user registration processes.
