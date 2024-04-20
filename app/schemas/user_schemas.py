@@ -80,8 +80,8 @@ class UserBase(BaseModel):
     # Validators are used to validate the data
     @validator('username')
     def validate_username(cls, v):
-        if not re.match(r"^[a-zA-Z0-9_-]+$", v):
-            raise ValueError("Username can only contain letters, numbers, underscores, and hyphens.")
+        if not re.match(r"^[a-z0-9_-]+$", v):
+            raise ValueError("Username can only contain lowercase letters, numbers, underscores, and hyphens.")
         return v
 
     @validator('full_name')
