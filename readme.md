@@ -16,7 +16,7 @@ Welcome to the Event Manager Company! As a newly hired Software QA Analyst/Devel
 
 ## Setup and Preliminary Steps
 
-1. **Fork the Project Repository**: Fork the [project repository](https://github.com/yourusername/event_manager) to your own GitHub account. This creates a copy of the repository under your account, allowing you to work on the project independently.
+1. **Fork the Project Repository**: Fork the [project repository](https://github.com/SashankNallapareddy/event_manager) to your own GitHub account. This creates a copy of the repository under your account, allowing you to work on the project independently.
 
 2. **Clone the Forked Repository**: Clone the forked repository to your local machine using the `git clone` command. This creates a local copy of the repository on your computer, enabling you to make changes and run the project locally.
 
