@@ -86,3 +86,16 @@ def test_user_base_username_invalid(username, user_base_data):
     user_base_data["username"] = username
     with pytest.raises(ValidationError):
         UserBase(**user_base_data)
+
+@pytest.mark.parametrize("password", ["SecurePassword123@", "SecurePassword123@SecurePassword123@SecurePassword123@"])
+def test_valid_password_for_user_creation(password, user_create_data):
+    user_create_data["password"] = password
+    user = UserCreate(**user_create_data)
+    assert user.password == password
+    
+@pytest.mark.parametrize("password", ["Secure Password", "", "SecurePassword123", "securepassword123@", "securepassword1234", "securepassword1234!", "kdslhlskdhflskdlskdhflshdlksdflsdhflshdglshdlghsdlvs;ldvh;lsvh;lskchv;lsdfhv;kfvlkdfhvld"])
+def test_invalid_password_for_user_creation(password, user_base_data):
+    user_base_data["password"] = password
+    with pytest.raises(ValidationError):
+        UserCreate(**user_base_data)
+

@@ -42,3 +42,34 @@ Issues Fixed
     5. **Testing and Verification**: Rigorous testing procedures were conducted to validate the effectiveness of the modifications. Test cases were devised to cover various scenarios, including valid and invalid usernames, to ensure consistent behavior and error handling.
 
     By implementing these steps, the username validation logic was effectively revised to exclude capital letters, thereby mitigating errors and enhancing consistency in user registration processes.
+
+
+3. [Resolve CI/CD Pipeline Failure in Docker Scan](https://github.com/SashankNallapareddy/event_manager/issues/5)
+
+    To address the CI/CD pipeline failure during Docker scanning, the following steps were undertaken:
+
+    1. **Issue Identification:** Upon analysis of the CI/CD pipeline logs, it was observed that the Docker scan step failed consistently, indicating potential vulnerabilities within the container images.
+
+    2. **Review of Docker Scan Results:** The Docker scan results were examined to identify the specific vulnerabilities and security concerns present in the container images.
+
+    3. **Evaluation of Pipeline Configuration:** The configuration settings of the CI/CD pipeline, particularly those related to Docker image generation and scanning, were reviewed to identify any misconfigurations or outdated settings that could contribute to the failure.
+
+    4. **Update of Docker Dependencies:** As part of the resolution process, the dependencies and packages (gunicorn) used in the Docker images were updated to their latest secure versions. This involved upgrading relevant libraries, frameworks, and system packages to address known vulnerabilities.
+
+    5. **Testing and Validation:** The modified CI/CD pipeline configuration and Docker images have been tested to validate their functionality and security.
+
+    By implementing these steps, the CI/CD pipeline was successfully updated to address the Docker scan failure and enhance the overall security of the software delivery process.
+
+
+4. [Enforce Maximum Password Length of 64 Characters](https://github.com/SashankNallapareddy/event_manager/issues/7)
+
+    By capping passwords at 64 characters, we're boosting security in a few key ways:
+
+    1. **Guarding Against Attacks:** This limit helps prevent buffer overflow attacks, where attackers try to overwhelm systems with lengthy inputs. By keeping passwords within bounds, we shrink the potential attack surface.
+
+    2. **Easier Password Management:** Shorter, more manageable passwords are easier to remember and less likely to be jotted down or reused across accounts. It strikes a balance between security and convenience.
+
+    3. **Staying Compatible:** Many cryptographic algorithms used for password security have their own input length limits. By sticking to 64 characters, we ensure compatibility, maintaining strong security practices.
+
+    Overall, this restriction is a vital part of our security approach, keeping user accounts and sensitive data safe from various threats.
+
