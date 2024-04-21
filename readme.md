@@ -87,4 +87,4 @@ On a personal level, I realized the importance of effective time management and 
 In conclusion, this assignment served as a valuable learning experience, not only in terms of technical skills but also in fostering self-reliance and accountability. Moving forward, I will apply the lessons learned from this assignment to tackle future challenges with confidence and efficiency.
 
 
-![Docker Screenshot](docker.png)
+![Docker Screenshot](docker_screenshot.png)
