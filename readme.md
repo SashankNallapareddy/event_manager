@@ -73,3 +73,18 @@ Issues Fixed
 
     Overall, this restriction is a vital part of our security approach, keeping user accounts and sensitive data safe from various threats.
 
+5. [Enhance Profile Field Handling for Edge Cases](https://github.com/SashankNallapareddy/event_manager/issues/9)
+    - **Scenario Identification:** I've outlined various scenarios for updating profile fields, including simultaneous updates to bio and profile picture URL, individual updates, and cases involving invalid or excessively long data.
+    - **Test Case Creation:** Comprehensive test cases have been developed to cover each scenario, encompassing both positive and negative scenarios.
+    - **Execution and Validation:** The test suite has been executed using Pytest to ensure the API gracefully handles all edge cases and delivers appropriate responses.
+    - **Error Handling and Refinement:** Any identified issues or unexpected behaviors have been addressed through code refinement and the addition of error handling logic to enhance the robustness of the API.
+
+
+Through this individual assignment, I gained valuable insights into the importance of meticulous testing and robust error handling in software development. Crafting comprehensive test cases for various scenarios involving profile field updates allowed me to uncover potential issues early on and ensure the reliability of the API. Additionally, I deepened my understanding of error handling mechanisms, implementing appropriate error messages and refining code logic to gracefully handle edge cases. These technical skills will undoubtedly enhance my ability to develop resilient and user-friendly software in the future.
+
+On a personal level, I realized the importance of effective time management and self-discipline in managing individual assignments. Balancing the tasks of scenario identification, test case creation, and code refinement required careful planning and prioritization. Moreover, reflecting on my own work allowed me to identify areas for improvement and refine my approach to problem-solving. While individual assignments lack the collaborative dynamics of team projects, they provide valuable opportunities for personal growth and self-assessment.
+
+In conclusion, this assignment served as a valuable learning experience, not only in terms of technical skills but also in fostering self-reliance and accountability. Moving forward, I will apply the lessons learned from this assignment to tackle future challenges with confidence and efficiency.
+
+
+![Docker Screenshot](docker_screenshot.png)
