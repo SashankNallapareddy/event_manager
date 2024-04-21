@@ -1,3 +1,4 @@
+import uuid
 import pytest
 from pydantic import ValidationError
 from datetime import datetime
@@ -99,3 +100,19 @@ def test_invalid_password_for_user_creation(password, user_base_data):
     with pytest.raises(ValidationError):
         UserCreate(**user_base_data)
 
+def test_user_update_partial_with_full_name(user_update_data):
+    partial_data = {"email": user_update_data["email"], "full_name": user_update_data["full_name"]}
+    user_update = UserUpdate(**partial_data)
+    assert user_update.email == partial_data["email"]
+    assert user_update.full_name == partial_data["full_name"]
+    
+def test_user_update_with_invalid_link(user_update_data):
+    partial_data = {"email": user_update_data["email"], "profile_picture_url": "https://google.com/"}
+    with pytest.raises(ValidationError):
+        UserUpdate(**partial_data)
+
+@pytest.mark.parametrize("full_name", ["Hello world 1234"])
+def test_user_base_full_name_invalid(full_name, user_base_data):
+    user_base_data["full_name"] = full_name
+    with pytest.raises(ValidationError):
+        UserCreate(**user_base_data)
