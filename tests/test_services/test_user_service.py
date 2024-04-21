@@ -159,18 +159,12 @@ async def test_unlock_user_account(db_session, locked_user):
     is_locked = await UserService.is_account_locked(db_session, locked_user.username)
     assert not is_locked, "The account should be unlocked after calling unlock_user_account."
     
-async def test_count(db_session):
-    await UserService.create(db_session, {
-        "username": "user-1",
-        "email": "user_1@example.com",
-        "password": "SecurePassword!",
-    })
-    
-    await UserService.create(db_session, {
-        "username": "user-2",
-        "email": "user_2@example.com",
-        "password": "SecurePassword!",
-    })
-        
+async def test_count_of_users(db_session):
+    for i in range(1, 5):
+        await UserService.create(db_session, {
+            "username": f"user-{i}",
+            "email": f"user_{i}@example.com",
+            "password": f"SecurePassword{i}!",
+        })
     count = await UserService.count(db_session)
-    assert count == 2
+    assert count == 4
