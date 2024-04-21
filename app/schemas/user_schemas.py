@@ -132,6 +132,8 @@ class UserCreate(UserBase):
             raise ValueError("Password must contain at least one digit.")
         if not re.search(r"[!@#$%^&*(),.?\":{}|<>]", v):
             raise ValueError("Password must contain at least one special character.")
+        if len(v) > 64:
+            raise ValueError("Password should not exceed 64 characters.")
         return v
 
     class Config:

@@ -59,3 +59,17 @@ Issues Fixed
     5. **Testing and Validation:** The modified CI/CD pipeline configuration and Docker images have been tested to validate their functionality and security.
 
     By implementing these steps, the CI/CD pipeline was successfully updated to address the Docker scan failure and enhance the overall security of the software delivery process.
+
+
+4. [Enforce Maximum Password Length of 64 Characters](https://github.com/SashankNallapareddy/event_manager/issues/7)
+
+    By capping passwords at 64 characters, we're boosting security in a few key ways:
+
+    1. **Guarding Against Attacks:** This limit helps prevent buffer overflow attacks, where attackers try to overwhelm systems with lengthy inputs. By keeping passwords within bounds, we shrink the potential attack surface.
+
+    2. **Easier Password Management:** Shorter, more manageable passwords are easier to remember and less likely to be jotted down or reused across accounts. It strikes a balance between security and convenience.
+
+    3. **Staying Compatible:** Many cryptographic algorithms used for password security have their own input length limits. By sticking to 64 characters, we ensure compatibility, maintaining strong security practices.
+
+    Overall, this restriction is a vital part of our security approach, keeping user accounts and sensitive data safe from various threats.
+
